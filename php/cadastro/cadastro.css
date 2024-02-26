@@ -1,0 +1,120 @@
+body {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside img.logo {
+  width: 350px;
+  height: 350px;
+}
+
+main {
+  background: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main div form span {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 0px;
+}
+
+main div form span label {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+main div form span input {
+  padding: 15px 20px;
+  background: #dee3e7;
+  border-radius: 20px;
+  min-width: 300px;
+  border: 0;
+}
+
+main div form span:last-child {
+  margin-bottom: 0px;
+}
+
+main div form span input::placeholder {
+  font-weight: bold;
+}
+
+main div h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 12px 0px;
+}
+
+main small {
+  text-align: center;
+}
+
+form button[type="submit"] {
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: black;
+  margin: 12px 0px;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+form a {
+  color: #b0bac3;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+span.error {
+  color: red;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: flex;
+  }
+
+  main {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+}

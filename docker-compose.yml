@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./php:/var/www/html
+      - ./config/custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: academic
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: ["postgres", "-c", "log_statement=all"]

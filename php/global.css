@@ -1,0 +1,14 @@
+:root {
+  --primary: #38b6ff;
+  --secondary: #000000;
+  --footer: #292c33;
+  --background: #c0e4fc;
+}
+
+* {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button[type="submit"] {
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: red;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+img.logo {
+  width: 250px;
+  height: 250px;
+}
